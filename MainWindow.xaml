@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApptemper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Выберите день: " VerticalAlignment="Center"/>
+            <ComboBox x:Name="dayComboBox" Width="100" SelectionChanged="DayComboBox_SelectionChanged"/>
+        </StackPanel>
+        <oxy:PlotView x:Name="temperatureChart" Grid.Row="1" Margin="10"/>
+    </Grid>
+</Window>
